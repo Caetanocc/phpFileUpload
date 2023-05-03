@@ -40,9 +40,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idusuario`, `senha`, `email`, `nome`) VALUES
-(2, '202cb962ac59075b964b07152d234b70', 'ccdslv@gmail.com', 'Caetano'),
-(4, '81dc9bdb52d04dc20036dbd8313ed055', 'trcrisostenes@gmail.com', 'Tania'),
-(6, 'de99ed7462382e6d7c88f8a7e0e50573', 'admin', 'Admin Depto Juridico');
+(1, md5('admin'), 'admin', 'Admin Depto Juridico');
 
 --
 -- Indexes for dumped tables
@@ -51,8 +49,7 @@ INSERT INTO `usuario` (`idusuario`, `senha`, `email`, `nome`) VALUES
 --
 -- Indexes for table `usuario`
 --
-ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`idusuario`);
+ALTER TABLE `usuario`   ADD PRIMARY KEY (`idusuario`);
 
 --
 -- AUTO_INCREMENT for dumped tables
