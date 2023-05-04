@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 10-Out-2017 às 00:44
--- Versão do servidor: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Tempo de geração: 04-Maio-2023 às 03:13
+-- Versão do servidor: 10.4.27-MariaDB
+-- versão do PHP: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `etec`
+-- Banco de dados: `etec`
 --
 
 -- --------------------------------------------------------
@@ -28,13 +27,33 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `imagens`
 --
 
-CREATE TABLE IF NOT EXISTS `imagens` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `imagens` (
+  `id` int(11) NOT NULL,
   `arquivo` varchar(100) NOT NULL,
   `descricaoarq` varchar(250) NOT NULL,
   `datainc` date NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+  `idusuario` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `imagens`
+--
+ALTER TABLE `imagens`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `imagens`
+--
+ALTER TABLE `imagens`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
