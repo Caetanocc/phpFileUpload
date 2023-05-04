@@ -84,7 +84,7 @@
 		<td><?= substr($doc['descricaoarq'], 0, 40) ?></td>
 		<td><?= convertedata($doc['datainc']) ?></td>
 		<td><a href="apagar.php?id=<?= $doc['id'] ?>"><img src='img/delete.png' style="width:32px;height:32px;"></a></td>
-		<td><a href="arquivos/<?= $doc['arquivo'] ?>" target="_blank"><img src='img/lupa.png' style="width:32px;height:32px;"></a></td>
+		<td><a href="arquivos/<?=$_SESSION['nome'].'/'.$doc['arquivo'] ?>" target="_blank"><img src='img/lupa.png' style="width:32px;height:32px;"></a></td>
 	</tr>
 	<?php
 		endforeach
