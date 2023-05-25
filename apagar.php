@@ -15,6 +15,6 @@
 	$sqlstring = "delete from imagens where id=$id";
 	@mysqli_query($mysql->con, $sqlstring);
 	
-	unlink ('arquivos/'.$dados['arquivo']);
+	unlink ('./arquivos/'.$_SESSION['nome'].'/'.$dados['arquivo']);
 	header('Location: listadoc.php'); 
 ?>

@@ -53,7 +53,7 @@
 	
 	$conn = $mysql->con;
 	
-	$sqlstring = 'select * from imagens order by arquivo';
+	$sqlstring = 'select * from imagens where idusuario = '.$_SESSION['id'].' order by arquivo';
 	$query = @mysqli_query($mysql->con, $sqlstring);
 	$docs = array();
 	while ($dados = @mysqli_fetch_array($query)){
